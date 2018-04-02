@@ -67,6 +67,6 @@ public class AreaDao {
 			}
 			
 		}
-		return null;
+		return list;
 	}
 }
