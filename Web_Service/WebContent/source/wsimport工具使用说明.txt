@@ -1,0 +1,23 @@
+参考自：https://blog.csdn.net/aqsunkai/article/details/51711087
+
+wsimport简介
+在JDK的bin文件夹中，有一个wsimport.exe工具，可依据wsdl文件生成相应的类文件，将生存在本地这些类文件拷贝到需要使用的项目中，就可以像调用本地的类一样调用webService提供的方法。该工具可以用于非Java的服务器，如用C#编写的WebService，通过wsimport则生成Java的客户端实现。
+
+常用命令如下：
+	wsimport -keep -d D:\temp\d -s D:\temp\s -p com.map -verbose http://ws.webxml.com.cn/WebServices/MobileCodeWS.asmx?wsdl  
+	
+-keep：是否生成java源文件
+
+-d：指定.class文件的输出目录
+
+-s：指定.java文件的输出目录
+
+-p：定义生成类的包名，不定义的话有默认包名
+
+-verbose：在控制台显示输出信息
+
+-b：指定jaxws/jaxb绑定文件或额外的schemas
+
+-extension：使用扩展来支持SOAP1.2
+
+推荐一个网站，提供了全面的WebService接口供参考：http://www.webxml.com.cn/zh_cn/web_services.aspx
